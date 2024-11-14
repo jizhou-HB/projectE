@@ -1,0 +1,72 @@
+.container {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.dice {
+  text-align: center;
+  display: inline-block;
+
+}
+
+body {
+  background-color: #393E46;
+}
+
+h1 {
+  margin: 30px;
+  font-family: 'Lobster', cursive;
+  text-shadow: 5px 0 #232931;
+  font-size: 8rem;
+  color: #4ECCA3;
+}
+
+p {
+  font-size: 2rem;
+  color: #4ECCA3;
+  font-family: 'Indie Flower', cursive;
+}
+
+img {
+  width: 80%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Adjust gap between buttons as needed */
+  margin-bottom: 20px; /* Space between buttons and dice images */
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#badge-container {
+  margin-top: 20px;
+  text-align: center; /* Center the badges */
+}
+
+#badge1, #badge2, #badge3 {
+  width: 100px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin: 5px;
+  transition: transform 0.3s ease-in-out; /* Optional: add animation when displayed */
+}
+
+#badge1.show, #badge2.show, #badge3.show {
+  display: inline-block; /* Make sure to display the badge */
+  transform: scale(1.2); /* Optional: small animation effect */
+}
+
+footer {
+  margin-top: 5%;
+  color: #EEEEEE;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+
+}
