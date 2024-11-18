@@ -1,5 +1,6 @@
 .container {
-  width: 70%;
+  width: 90%; /* Increase flexibility */
+  max-width: 1200px; /* Set a maximum width for larger screens */
   margin: auto;
   text-align: center;
 }
@@ -7,19 +8,23 @@
 .dice {
   text-align: center;
   display: inline-block;
-
 }
 
 body {
   background-color: #393E46;
+  margin: 0; /* Remove default margin for better fit */
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and borders are included in width/height calculations */
 }
 
 h1 {
   margin: 30px;
   font-family: 'Lobster', cursive;
   text-shadow: 5px 0 #232931;
-  font-size: 8rem;
+  font-size: 8vw; /* Responsive font size relative to viewport width */
   color: #4ECCA3;
+  text-align: center;
+  word-wrap: break-word;
 }
 
 p {
@@ -35,40 +40,43 @@ img {
 .button-container {
   display: flex;
   justify-content: center;
-  gap: 10px; /* Adjust gap between buttons as needed */
-  margin-bottom: 20px; /* Space between buttons and dice images */
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 button {
-  padding: 0; /* No padding to maintain square shape */
-  font-size: 24px; /* Increase font size */
+  padding: 0;
+  font-size: 2vw; /* Responsive font size relative to viewport width */
   margin: 15px;
   cursor: pointer;
-  width: 240px; /* 3 times bigger width */
-  height: 240px; /* 3 times bigger height to keep it square */
-  background-color: #4ECCA3; /* Elegant, deep blue color */
-  color: white; /* White text for contrast */
-  border: none; /* Remove border for a cleaner look */
-  border-radius: 15px; /* Rounded corners for a more elegant appearance */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
-  transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effects */
+  width: 20vw; /* Responsive width relative to viewport */
+  height: 20vw; /* Same value as width to keep button square */
+  max-width: 240px; /* Ensure buttons don't get too large */
+  max-height: 240px; /* Ensure buttons don't get too large */
+  background-color: #4ECCA3; /* Elegant  color */
+  color: white;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 #badge-container {
   margin-top: 20px;
-  text-align: center; /* Center the badges */
+  text-align: center;
 }
 
 #badge1, #badge2, #badge3 {
-  width: 100px; /* Adjust size as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 100px;
+  height: auto;
   margin: 5px;
-  transition: transform 0.3s ease-in-out; /* Optional: add animation when displayed */
+  transition: transform 0.3s ease-in-out;
 }
 
 #badge1.show, #badge2.show, #badge3.show {
-  display: inline-block; /* Make sure to display the badge */
-  transform: scale(1.2); /* Optional: small animation effect */
+  display: inline-block;
+  transform: scale(1.2);
 }
 
 footer {
@@ -76,10 +84,35 @@ footer {
   color: #EEEEEE;
   text-align: center;
   font-family: 'Indie Flower', cursive;
-
 }
 
 button:hover {
-  transform: scale(1.05); /* Slightly enlarge on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 6vw; /* Adjust size for medium screens */
+    margin: 15px;
+  }
+
+  button {
+    width: 30vw; /* Adapt button size on smaller screens */
+    height: 30vw; /* Keep square ratio */
+    font-size: 3vw; /* Adjust font size */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 5vw; /* Further reduce size for very small screens */
+    margin: 10px;
+  }
+
+  button {
+    width: 40vw; /* Adapt further for smaller screens */
+    height: 40vw; /* Keep square ratio */
+    font-size: 4vw; /* Further adjust font size */
+  }
 }
