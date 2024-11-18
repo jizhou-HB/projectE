@@ -40,10 +40,18 @@ img {
 }
 
 button {
-  padding: 15px 30px;
-  font-size: 16px;
-  margin: 10px;
+  padding: 0; /* No padding to maintain square shape */
+  font-size: 24px; /* Increase font size */
+  margin: 15px;
   cursor: pointer;
+  width: 240px; /* 3 times bigger width */
+  height: 240px; /* 3 times bigger height to keep it square */
+  background-color: #4ECCA3; /* Elegant, deep blue color */
+  color: white; /* White text for contrast */
+  border: none; /* Remove border for a cleaner look */
+  border-radius: 15px; /* Rounded corners for a more elegant appearance */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effects */
 }
 
 #badge-container {
@@ -69,4 +77,9 @@ footer {
   text-align: center;
   font-family: 'Indie Flower', cursive;
 
+}
+
+button:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
 }
