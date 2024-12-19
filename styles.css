@@ -1,115 +1,85 @@
+/* Keep your reset styles at the top */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 
+body {
+  background-color: #393E46;
+}
+
+/* Container styles */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
-  min-height: 100vh; /* Make container at least full viewport height */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly; /* Distribute space evenly */
+  justify-content: space-evenly;
 }
 
-.dice {
-  text-align: center;
-  display: inline-block;
-  display: flex; /* Use flexbox to align items in a row */
-  justify-content: center; /* Center the dice horizontally */
-  align-items: center; /* Center the dice vertically */
-  gap: 10px; /* Optional: Add space between the dice */
-}
-
-body {
-  background-color: #393E46;
-  margin: 0; /* Remove default margin for better fit */
-  padding: 0;
-  box-sizing: border-box; /* Ensures padding and borders are included in width/height calculations */
-}
-
+/* Typography */
 h1 {
-  margin: 30px;
-  font-family: 'Comic Sans MS', cursive, sans-serif; /* Changed font to a kid-friendly style */
+  font-family: 'Comic Sans MS', cursive, sans-serif;
   text-shadow: 5px 0 #232931;
-  font-size: 8vw; /* Responsive font size relative to viewport width */
+  font-size: 4rem; /* Start with a reasonable base size */
   color: #4ECCA3;
-  text-align: center;
-  word-wrap: break-word;
   white-space: nowrap;
+  margin: 20px 0;
 }
 
 h2 {
-  color: white; /* Set text color to white */
-  font-family: 'Comic Sans MS', cursive, sans-serif; /* Change font to a kid-friendly style */
-  font-size: 2.5rem; /* Adjust font size as needed */
-  text-align: center; /* Center the text */
-  margin: 10px 0; /* Add some margin for spacing */
+  color: white;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 2.5rem;
+  margin: 20px 0;
 }
 
-p {
-  font-size: 2rem;
-  color: #4ECCA3;
-  font-family: 'Indie Flower', cursive;
+/* Dice styles */
+.dice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
 }
 
-img {
-  width: 80%;
+.dice img {
+  width: 150px;
+  height: auto;
 }
 
+/* Button styles */
 .button-container {
   display: flex;
   gap: 20px;
   align-items: center;
-  justify-content: center; /* Center items horizontally */
+  justify-content: center;
   flex-wrap: wrap;
-  margin: 0 auto; /* Center the container itself */
-  max-width: 800px; /
+  margin: 20px auto;
 }
 
 button {
-  padding: 10px 20px;
-  font-size: 16px;
-/* Responsive font size relative to viewport width */
-  margin: 15px;
-  cursor: pointer;
-  width: 20vw; /* Responsive width relative to viewport */
-  height: 10vw; /* Reduced height for rectangular shape */
-  max-width: 240px; /* Ensure buttons don't get too large */
-  max-height: 120px; /* Adjusted max height */
-  background-color: #4ECCA3; /* Elegant color */
-  color: white; /* Button text color */
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #4ECCA3;
+  color: white;
   border: none;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s, box-shadow 0.2s;
-}
-
-#badge-container {
-  margin-top: 20px;
-  text-align: center;
-}
-
-#badge1, #badge2, #badge3 {
-  width: 100px;
-  height: auto;
-  margin: 5px;
-  transition: transform 0.3s ease-in-out;
-}
-
-#badge1.show, #badge2.show, #badge3.show {
-  display: inline-block;
-  transform: scale(1.2);
-}
-
-footer {
-  margin-top: 5%;
-  color: #EEEEEE;
-  text-align: center;
-  font-family: 'Indie Flower', cursive;
+  cursor: pointer;
 }
 
 button:hover {
@@ -117,146 +87,121 @@ button:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 768px) {
-  .container {
-    padding: 40px 20px;
-    justify-content: space-evenly; /* Distribute content evenly across full height */
-}
-  
-  h1 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-h2 {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 40px; 
-}
-
-.button-container {
-  flex-direction: column;
-  width: 100%;
-  gap: 40px; 
-}
-
-button {
-  width: 100%;
-  padding: 20px;
-  font-size: 1.3rem;
-  margin: 10px 0;
-}
-
+/* Toggle styles */
+/* Toggle styles */
 .toggle-container {
-  margin-top: 20px;
-  gap: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .toggle {
-  transform: scale(1.2);
-}
-
-.toggle-text {
-  font-size: 1.1rem;
-}
-
-/* Make dice bigger if you have dice elements */
-.dice {
-  transform: scale(1.3);
-  margin: 30px auto;
-}
-
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 5vw; /* Further reduce size for very small screens */
-    margin: 10px;
-  }
-
-  button {
-    padding: 20px;
-    font-size: 1.4rem;
-}
-
-.dice {
-    transform: scale(1.5);
-}
-}
-
-.toggle {
-    position: relative;
-    display: inline-block;
-    width: 60px; /* Width of the toggle */
-    height: 34px; /* Height of the toggle */
-    display: block; /* Ensure the toggle is displayed as a block element */
-    margin: 10px auto; /* Center the toggle */
+  position: relative;
+  width: 60px;
+  height: 34px;
 }
 
 .toggle input {
-    opacity: 0; /* Hide the checkbox */
-    width: 0;
-    height: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc; /* Off state color */
-    transition: .4s;
-    border-radius: 34px; /* Rounded corners */
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
 }
 
 .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px; /* Height of the toggle knob */
-    width: 26px; /* Width of the toggle knob */
-    left: 4px; /* Position of the knob */
-    bottom: 4px;
-    background-color: white; /* Knob color */
-    transition: .4s;
-    border-radius: 50%; /* Round knob */
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
 }
 
 input:checked + .slider {
-    background-color: #4ECCA3; /* On state color */
+  background-color: #4ECCA3;
 }
 
 input:checked + .slider:before {
-    transform: translateX(26px); /* Move knob to the right */
-}
-
-.dice {
-    display: flex; /* Use flexbox to align items in a row */
-    justify-content: center; /* Center the dice horizontally */
-    align-items: center; /* Center the dice vertically */
-    gap: 20px; /* Add space between the dice */
-    margin-top: 20px; /* Add space above the dice */
-}
-
-.dice img {
-    width: 150px; /* Set a larger fixed width for the dice images */
-    height: auto; /* Maintain aspect ratio */
-}
-
-.toggle-container {
-    display: flex; /* Use flexbox to align toggle and text */
-    justify-content: center; /* Center the toggle and text */
-    align-items: center; /* Align items vertically */
-    margin: 10px 0; /* Add some margin for spacing */
-}
-
-.toggle {
-    margin-right: 10px; /* Space between toggle and text */
+  transform: translateX(26px);
 }
 
 .toggle-text {
-    text-align: center; /* Center the text */
-    color: white; /* Set the text color to white */
+  color: white;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  .container {
+      padding: 40px 20px;
+      justify-content: space-between;
+  }
+
+  h1 {
+      font-size: 2.5rem;
+      margin: 30px 0;
+  }
+
+  h2 {
+      font-size: 1.8rem;
+      margin: 30px 0;
+  }
+
+  .button-container {
+      flex-direction: column;
+      gap: 30px;
+  }
+
+  button {
+      width: 100%;
+      padding: 20px;
+      font-size: 1.3rem;
+  }
+
+  .dice {
+      flex-direction: column;
+      gap: 30px;
+  }
+
+  .dice img {
+      width: 200px; /* Bigger dice for mobile */
+  }
+
+  .toggle-container {
+      margin: 30px 0;
+  }
+
+  .toggle {
+      transform: scale(1.2);
+  }
+
+  .toggle-text {
+      font-size: 1.2rem;
+      color: white;
+  }
+}
+
+/* Footer */
+footer {
+  color: #EEEEEE;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  padding: 20px;
 }
