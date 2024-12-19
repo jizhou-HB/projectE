@@ -1,8 +1,18 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  text-align: center; 
+  text-align: center;
+  min-height: 100vh; /* Make container at least full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; /* Distribute space evenly */
 }
 
 .dice {
@@ -109,7 +119,8 @@ button:hover {
 
 @media (max-width: 768px) {
   .container {
-    padding: 40px 20px; /* More vertical padding */
+    padding: 40px 20px;
+    justify-content: space-evenly; /* Distribute content evenly across full height */
 }
   
   h1 {
