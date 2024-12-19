@@ -150,63 +150,73 @@ input:checked + .slider:before {
 /* Mobile styles */
 @media screen and (max-width: 768px) {
   .container {
-      padding: 20px;
-      justify-content: space-around;
+    padding: 2vh 20px;  /* Changed to vh units */
+        justify-content: space-between;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
   }
 
   h1 {
-      font-size: 4rem !important;
-      margin: 15px 0;  /* Reduced from 30px */
-      font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive;
-      -webkit-text-size-adjust: 100%;  /* Added fallback fonts */
-  }
-
-  h2 {
-    font-size: 2.5rem !important;  /* Increased from 1.8rem */
-    margin: 15px 0;  /* Reduced from 30px */
+    font-size: 3rem !important;  /* Reduced from 4rem */
+    margin: 1vh 0;  /* Changed to vh units */
     font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive;
     -webkit-text-size-adjust: 100%;
-  }
+}
 
-  .button-container {
-      flex-direction: column;
-      gap: 20px;
-  }
+h2 {
+  font-size: 2rem !important;  /* Reduced from 2.5rem */
+  margin: 1vh 0;
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive;
+  -webkit-text-size-adjust: 100%;
+}
 
-  button {
-    width: 100%;
-    padding: 25px;
-    font-size: 2.2rem !important;  /* Increased button text size */
-    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive;
-    font-weight: bold;
-  }
+.button-container {
+  flex-direction: column;
+  gap: 2vh;  /* Changed to vh units */
+}
 
-  .dice {
-      flex-direction: column;
-      gap: 20px;
-  }
+button {
+  width: 100%;
+  padding: 2vh 20px;  /* Changed to vh units */
+  font-size: 1.8rem !important;  /* Reduced from 2.2rem */
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive;
+  font-weight: bold;
+}
 
+.dice {
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.dice img {
+  width: 200px;  /* Reduced from 250px */
+  height: auto;
+}
+
+.toggle-container {
+  margin: 1vh 0;
+  gap: 30px;
+}
+
+.toggle {
+  transform: scale(1.4);  /* Reduced from 1.6 */
+}
+
+.toggle-text {
+  font-size: 1.5rem !important;  /* Reduced from 2rem */
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive;
+  font-weight: bold;
+}
+}
+
+@media screen and (max-width: 768px) and (min-height: 800px) {
+  .container {
+      padding: 3vh 20px;
+  }
+  
   .dice img {
-      width: 250px; /* Bigger dice for mobile */
-  }
-
-  .toggle-container {
-      margin: 20px 0;
-      gap: 40px;  /* Increased from 10px */
-        display: flex;
-        align-items: center;
-  }
-
-  .toggle {
-      transform: scale(1.6);
-  }
-
-  .toggle-text {
-      font-size: 2rem !important;
-      color: white;
-      font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive;
-      font-weight: bold;
-      margin-left: 10px; 
+      width: 250px;  /* Larger dice for taller screens */
   }
 }
 
