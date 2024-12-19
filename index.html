@@ -11,21 +11,23 @@
   </head>
   <body>
     <div class="container">
-      <h1>Malaufgaben</h1>
+      <h1>Würfel mal!</h1>
+      <h2>Du kannst würfeln und die Lösung sagen!</h2>
 
       <div class="button-container">
-        <button id="checkAnswerButton">Lösung eingeben</button>
+        <button id="checkAnswerButton">Sag die Lösung</button>
+        <div class="toggle-container">
+            <label class="toggle">
+                <input type="checkbox" id="toggleDiceCheckbox">
+                <span class="slider"></span>
+            </label>
+            <span class="toggle-text">Wechsel zwischen Zahlen und Punkten</span>
+        </div>
       </div>
 
-
       <div class="dice">
-        <p>Number 1</p>
-        <img class="img1" src="" />
-      </div>
-
-      <div class="dice">
-        <p>Number 2</p>
-        <img class="img2" src="" />
+        <img src="images/dice1.png" alt="Dice 1">
+        <img src="images/dice2.png" alt="Dice 2">
       </div>
     </div>
 
@@ -36,7 +38,7 @@
       <img id="badge3" src="images/pic3.png" alt="Badge 3" style="display: none;">
     </div>
 
-    <footer>calculation exercises based on course tasks, thanks Angela</footer>
+    <footer>inspired by Angela's course tasks</footer>
 
     <script src="index1.js"></script>
   </body>
