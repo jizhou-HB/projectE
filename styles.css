@@ -29,6 +29,7 @@ h1 {
   color: #4ECCA3;
   text-align: center;
   word-wrap: break-word;
+  white-space: nowrap;
 }
 
 h2 {

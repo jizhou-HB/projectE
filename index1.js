@@ -36,7 +36,7 @@ recognition.continuous = false; // Set to false to stop after the first result
 
 // Event listener for voice input
 document.getElementById("checkAnswerButton").addEventListener("click", function() {
-  document.querySelector("h1").innerHTML = "Sage die Antwort!"; // Prompt the user to speak
+  document.querySelector("h1").innerHTML = "Sag die Antwort!"; // Prompt the user to speak
 
   // Start listening for speech input
   recognition.start();
@@ -82,11 +82,11 @@ document.getElementById("checkAnswerButton").addEventListener("click", function(
         // Generate a new task automatically after 3 seconds
         setTimeout(function() {
             correctAnswer = generateNewDiceValues(); // Generate new values for the next task
-            document.querySelector("h1").innerHTML = "Versuche es!";
+            document.querySelector("h1").innerHTML = "Versuch es!";
         }, 2000); // 2-second delay
     } else {
         console.log("Das ist nicht die richtige Zahl. Bitte versuchen Sie es erneut.");
-        document.querySelector("h1").innerHTML = "leider...versuch noch mal";
+        document.querySelector("h1").innerHTML = "Versuch's noch mal";
         var tom2 = new Audio("sounds/crash.mp3");
         tom2.play();
     }
@@ -94,7 +94,7 @@ document.getElementById("checkAnswerButton").addEventListener("click", function(
 
   recognition.onerror = function(event) {
     console.log("Entschuldigung, ich habe dich nicht verstanden.");
-    document.querySelector("h1").innerHTML = "Bitte versuchen Sie es erneut.";
+    document.querySelector("h1").innerHTML = "Versuch's noch mal";
     var tom2 = new Audio("sounds/crash.mp3");
     tom2.play();
   };
