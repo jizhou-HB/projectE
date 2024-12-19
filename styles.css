@@ -145,6 +145,11 @@ input:checked + .slider:before {
   font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
+#badge-container img {
+  width: 100px;  /* Default size for desktop */
+  height: auto;
+}
+
 
 
 /* Mobile styles */
@@ -208,6 +213,12 @@ button {
   font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive;
   font-weight: bold;
 }
+
+#badge-container img {
+  width: 80px;  /* Smaller size for mobile */
+  height: auto;
+}
+
 }
 
 @media screen and (max-width: 768px) and (min-height: 800px) {
