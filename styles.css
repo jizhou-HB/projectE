@@ -146,8 +146,9 @@ input:checked + .slider:before {
 }
 
 #badge-container img {
-  width: 100px;  /* Default size for desktop */
+  width: 150px;  /* Default size for desktop */
   height: auto;
+  max-width: 100%;
 }
 
 
@@ -215,8 +216,9 @@ button {
 }
 
 #badge-container img {
-  width: 80px;  /* Smaller size for mobile */
-  height: auto;
+  width: 180px;  /* Same as dice size on desktop */
+    height: auto;
+    max-width: 100%;
 }
 
 }
